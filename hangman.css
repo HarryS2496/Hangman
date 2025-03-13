@@ -1,0 +1,10 @@
+.word-display .letter {
+  display: inline-block;
+  width: 30px; 
+  height: 40px; 
+  margin: 0 5px; 
+  text-align: center;
+  font-size: 30px; 
+  border-bottom: 2px solid #000; 
+  font-weight: bold;
+}
