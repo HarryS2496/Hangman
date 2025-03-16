@@ -13,7 +13,7 @@ let currentWord, correctLetters, wrongGuessCount;
 const resetGame = () => {
   correctLetters = [];
   wrongGuessCount = 0;
-  hangmanImage.src = "/images/hangman-0.svg";
+  hangmanImage.src = "images/hangman-0.svg";
   guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
   wordDisplay.innerHTML = currentWord
     .split("")
@@ -58,7 +58,7 @@ const initGame = (button, clickedLetter) => {
     // If clicked letter doesn't exist, then update the wrongGuessCount and hangman image
     wrongGuessCount++;
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-    hangmanImage.src = `/images/hangman-${wrongGuessCount}.svg`;
+    hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
   }
   button.disabled = true; // Disables the clicked button so user can't click again
 
