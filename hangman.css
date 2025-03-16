@@ -41,12 +41,14 @@ h1 {
   max-width: 200px;
 }
 
+h4 {
+  margin: 5px;
+  max-width: 500px;
+}
 .game-modal h4 {
   font-size: 1.5em;
 }
-h4 {
-  margin: 5px;
-}
+
 
 .hangman-box img {
   width: 400px;
