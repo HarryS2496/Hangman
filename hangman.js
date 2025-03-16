@@ -35,7 +35,7 @@ const getRandomWord = () => {
 
 // Victory text
 const gameOver = (isVictory) => {
-  // After game complete.. showing modal with relevant details
+  // Shows modal with relevant details when you win vs when you lose
   const modalText = isVictory ? `Congratulations, you got it right!!` : `The correct word was: `;
   gameModal.querySelector("h4").innerText = isVictory ? 'Congrats!' : 'Game Over!';
   gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
@@ -43,20 +43,21 @@ const gameOver = (isVictory) => {
 };
 
 const initGame = (button, clickedLetter) => {
-  // Checking if clickedLetter exists on the currentWord
-  if(currentWord.includes(clickedLetter)) {
+  // Checks if clickedLetter exists on the currentWord
+  if (currentWord.includes(clickedLetter)) {
     // Showing all correct letters on the word display
     [...currentWord].forEach((letter, index) => {
       if(letter === clickedLetter) {
         correctLetters.push(letter);
-        wordDisplay.querySelectorAll("li")[index].innerText = letter;
+        wordDisplay.querySelectorAll("li")[index].innerText = letter.toUpperCase();
         wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
       }
     });
   }
   else {
-    // If clicked letter doesn't exist then update the wrongGuessCount and hangman image
+    // If clicked letter doesn't exist, then update the wrongGuessCount and hangman image
     wrongGuessCount++;
+    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
     hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
   }
   button.disabled = true; // Disables the clicked button so user can't click again
@@ -73,7 +74,7 @@ const initGame = (button, clickedLetter) => {
 // Creating the keyboard buttons
 for (let i = 97; i <= 122; i++) {
   const button = document.createElement("button");
-  button.innerText = String.fromCharCode(i);
+  button.innerText = String.fromCharCode(i).toUpperCase();
   keyboardDiv.appendChild(button);
   button.addEventListener("click", (e) => initGame(e.target, String.fromCharCode(i)));
 }
