@@ -7,26 +7,28 @@
     <link rel="stylesheet" href="hangman.css" />
   </head>
   <body>
-    <h1>Hangman</h1>
-    <div class="container">
-      <div class="hangman-box">
-        <img src="#" draggable="false" alt="hangman-img" />
+    <main>
+      <h1>Hangman</h1>
+      <div class="container">
+        <div class="hangman-box">
+          <img src="#" draggable="false" alt="hangman-img" />
+        </div>
+        <div class="game-box">
+          <ul class="word-display"></ul>
+          <h4 class="hint">Hint: <b></b></h4>
+          <h4 class="incorrect-guesses">Incorrect guesses: <b></b></h4>
+          <div class="keyboard"></div>
+        </div>
       </div>
-      <div class="game-box">
-        <ul class="word-display"></ul>
-        <h4 class="hint">Hint: <b></b></h4>
-        <h4 class="incorrect-guesses">Incorrect guesses: <b></b></h4>
-        <div class="keyboard"></div>
+      <div class="game-modal">
+        <div class="content">
+          <h4>Game Over!</h4>
+          <p>The correct word was: <b></b></p>
+          <button class="play-again">Play Again</button>
+        </div>
       </div>
-    </div>
-    <div class="game-modal">
-      <div class="content">
-        <h4>Game Over!</h4>
-        <p>The correct word was: <b></b></p>
-        <button class="play-again">Play Again</button>
-      </div>
-    </div>
-    <script src="/word-list.js"></script>
-    <script src="/hangman.js"></script>
+    </main>
+    <script src="/js/hangman.js"></script>
+    <script src="/js/word-list.js"></script>
   </body>
 </html>
