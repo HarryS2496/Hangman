@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
-    <link rel="stylesheet" href="hangman.css" />
-  </head>
-  <body>
-    <main>
-      <h1>Hangman</h1>
-      <div class="container">
-        <div class="hangman-box">
-          <img src="#" draggable="false" alt="hangman-img" />
-        </div>
-        <div class="game-box">
-          <ul class="word-display"></ul>
-          <h4 class="hint">Hint: <b></b></h4>
-          <h4 class="incorrect-guesses">Incorrect guesses: <b></b></h4>
-          <div class="keyboard"></div>
-        </div>
-      </div>
-      <div class="game-modal">
-        <div class="content">
-          <h4>Game Over!</h4>
-          <p>The correct word was: <b></b></p>
-          <button class="play-again">Play Again</button>
-        </div>
-      </div>
-    </main>
-    <script src="js/hangman.js"></script>
-    <script src="js/word-list.js"></script>
-  </body>
+    <link rel="stylesheet" href="hangman.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HANGMAN</h1>
+        <h3 id="description-of-hangman">Guess the word by clicking the letters below.</h3>
+        <img id="hangman-image" src="images/hangman-0.svg" alt="Hangman" />
+        <p id="hint-display"></p>
+        <p id="word-display"></p>
+        <p id="message"></p>
+        <div id="keyboard"></div>
+        <button id="restart">Restart Game</button>
+    </div>
+
+    <script src="word-list.js"></script>
+    <script src="hangman.js"></script>
+</body>
 </html>

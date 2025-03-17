@@ -1,4 +1,4 @@
-const wordList = [
+const words = [
     {
       word: "adventure",
       hint: "An exciting or daring experience.",
@@ -172,7 +172,7 @@ const wordList = [
       hint: "The daily disappearance of the sun below the horizon.",
     },
     {
-      word: "sympathy",
+      word: "symphony",
       hint: "A long musical composition for a full orchestra, typically in multiple movements.",
     },
     {
