@@ -94,7 +94,7 @@ function handleGuess(letter, button) {
 // Reinitialization when you click the restart button
 restartButton.addEventListener("click", () => {
   chosenEntry = words[Math.floor(Math.random() * words.length)];
-  chosenWord = chosenEntry.word;
+  chosenWord = chosenEntry.word.toUpperCase();
   chosenHint = chosenEntry.hint;
   guessedLetters = [];
   remainingAttempts = 6;
