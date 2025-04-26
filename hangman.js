@@ -83,9 +83,11 @@ function handleGuess(letter, button) {
     if (!guessedLetters.includes(letter)) {
       guessedLetters.push(letter); // Add the letter if it's correct and hasn't been guessed before
     }
+    button.classList.add("correct");
   } else {
     remainingAttempts--; // If letter is incorrect
     updateHangmanImage();
+    button.classList.add("incorrect");
   }
   updateWordDisplay();
   checkGameStatus();
